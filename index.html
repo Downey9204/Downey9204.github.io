@@ -4,9 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Downey's Blog</title>
+    <meta name="keywords" content="프론트 엔드, Front-End" />
+    <meta name="description" content="Technical Blog" />
+    <meta name="author" content="Downey9204" />
+    <title>Downey9204's Blog</title>
+
+    <link rel="stylesheet" href="src/style.scss" />
+    <script type="module" src="src/app.js"></script>
   </head>
   <body>
-    <h1>Hello World</h1>
+    <header class="header">
+      <div class="header__wrap">
+        <div class="header__wrap__logo">
+          <img src="src/images/code-solid.svg" alt="Logo" />
+        </div>
+        <ul class="header__wrap__menu">
+          <li class="header__wrap__menu__item">Front-End</li>
+          <li class="header__wrap__menu__item">Back-End</li>
+        </ul>
+      </div>
+    </header>
+    <main class="feed">
+      <div class="feed__wrap">
+        <ul class="feed__wrap__list">
+          <li class="feed__wrap__list__item">
+            load, DOMContentLoaded, beforeunload
+          </li>
+          <li class="feed__wrap__list__item">bundler (parcel, webpack)</li>
+          <li class="feed__wrap__list__item">type = module</li>
+          <li class="feed__wrap__list__item">async, await</li>
+        </ul>
+      </div>
+    </main>
   </body>
 </html>

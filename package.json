@@ -1,0 +1,20 @@
+{
+  "name": "gitblog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Downey9204/Downey9204.github.io.git",
+  "author": "나다운 <devops9204@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.8.3",
+    "parcel": "^2.8.3",
+    "sass": "^1.58.3"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.7",
+    "reset-css": "^5.0.1"
+  },
+  "scripts": {
+    "dev": "parcel --no-source-maps index.html"
+  }
+}
