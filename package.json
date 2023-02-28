@@ -12,7 +12,10 @@
   },
   "dependencies": {},
   "scripts": {
-    "dev": "parcel --no-source-maps index.html",
+    "dev": "parcel index.html",
     "build": "parcel build index.html"
+  },
+  "targets": {
+    "main": false
   }
 }
