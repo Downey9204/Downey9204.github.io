@@ -10,11 +10,9 @@
     "parcel": "^2.8.3",
     "sass": "^1.58.3"
   },
-  "dependencies": {
-    "handlebars": "^4.7.7",
-    "reset-css": "^5.0.1"
-  },
+  "dependencies": {},
   "scripts": {
-    "dev": "parcel --no-source-maps index.html"
+    "dev": "parcel --no-source-maps index.html",
+    "build": "parcel build index.html"
   }
 }
