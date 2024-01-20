@@ -1,0 +1,19 @@
+{
+  "name": "dev-blog",
+  "version": "1.0.0",
+  "author": "Downey",
+  "main": "index.js",
+  "license": "ISC",
+  "description": "github io",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Downey9204/Downey9204.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Downey9204/Downey9204.github.io/issues"
+  },
+  "homepage": "https://github.com/Downey9204/Downey9204.github.io#readme"
+}
