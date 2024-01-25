@@ -4,3 +4,6 @@
 # build
 /build
 /dist
+
+# misc
+.env
