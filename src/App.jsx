@@ -1,7 +1,10 @@
+import AppRoutes from '@routes/AppRoutes';
+import './App.scss';
+
 const App = () => {
   return (
     <div className='app'>
-      <h1>Dev Blog</h1>
+      <AppRoutes />
     </div>
   );
 };

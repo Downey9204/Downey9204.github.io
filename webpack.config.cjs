@@ -69,6 +69,8 @@ module.exports = (env) => {
               loader: 'css-loader',
               options: {
                 modules: {
+                  namedExport: false,
+                  exportLocalsConvention: 'as-is',
                   auto: /\.module\.(css|scss)$/,
                   localIdentName: isDevMode
                     ? '[local]--[hash:base64:5]'
@@ -76,7 +78,7 @@ module.exports = (env) => {
                 },
               },
             },
-            'sass-loaders',
+            'sass-loader',
           ],
         },
         {
