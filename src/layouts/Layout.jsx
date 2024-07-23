@@ -1,5 +1,5 @@
-import { useDispatch, useSelector } from 'react-redux';
 import { Outlet } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
 import styles from './Layout.module.scss';
 import { setChangeTheme } from '@store/modules/themeSlice';
@@ -17,7 +17,7 @@ const Layout = () => {
       <header className={styles.header}>
         <section className={styles.section}>
           <div className={styles.logoContainer}>
-            {mode === 'dark' ? (
+            {mode === 'light' ? (
               <img className={styles.logo} src={logoDark} alt='' />
             ) : (
               <img className={styles.logo} src={logoLight} alt='' />
