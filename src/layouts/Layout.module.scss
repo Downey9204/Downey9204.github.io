@@ -15,6 +15,10 @@
 
       .logoContainer {
         padding: 4px 12px;
+        .logo {
+          width: 40px;
+          border-radius: 50%;
+        }
       }
       .undefinedContainer {
         display: flex;
