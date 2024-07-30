@@ -3,8 +3,11 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import styles from './Layout.module.scss';
 import { setChangeTheme } from '@store/modules/themeSlice';
+import { GITHUB_URL } from '@constants/config';
 import logoDark from '@assets/images/logo_dark.svg';
 import logoLight from '@assets/images/logo_light.svg';
+import themeIcon from '@assets/images/theme_contrast.svg';
+import githubIcon from '@assets/images/github_icon.svg';
 
 const Layout = () => {
   const { mode } = useSelector((state) => state.theme);
@@ -24,11 +27,19 @@ const Layout = () => {
             )}
           </div>
           <ul className={styles.undefinedContainer}>
-            <li className={styles.undefined}>Search</li>
-            <li className={styles.undefined} onClick={onThemeChange}>
-              Theme
+            <li className={styles.item}>
+              <div className={styles.search}>Search</div>
             </li>
-            <li className={styles.undefined}>Github</li>
+            <li className={styles.item}>
+              <button className={styles.btn} onClick={onThemeChange}>
+                <img className={styles.themeIcon} src={themeIcon} alt='' />
+              </button>
+            </li>
+            <li className={styles.item}>
+              <a className={styles.link} href={GITHUB_URL} target='_blank'>
+                <img className={styles.githubIcon} src={githubIcon} alt='' />
+              </a>
+            </li>
           </ul>
         </section>
       </header>

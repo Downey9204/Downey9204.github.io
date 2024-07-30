@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .app {
   width: 100vw;
   height: 100vh;
