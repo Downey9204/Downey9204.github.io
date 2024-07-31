@@ -6,8 +6,8 @@ import { setChangeTheme } from '@store/modules/themeSlice';
 import { GITHUB_URL } from '@constants/config';
 import logoDark from '@assets/images/logo_dark.svg';
 import logoLight from '@assets/images/logo_light.svg';
-import themeIcon from '@assets/images/theme_contrast.svg';
-import githubIcon from '@assets/images/github_icon.svg';
+import ContrastIcon from '@mui/icons-material/Contrast';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Layout = () => {
   const { mode } = useSelector((state) => state.theme);
@@ -26,18 +26,18 @@ const Layout = () => {
               <img className={styles.logo} src={logoLight} alt='' />
             )}
           </div>
-          <ul className={styles.undefinedContainer}>
+          <ul className={styles.topBarContainer}>
             <li className={styles.item}>
               <div className={styles.search}>Search</div>
             </li>
             <li className={styles.item}>
               <button className={styles.btn} onClick={onThemeChange}>
-                <img className={styles.themeIcon} src={themeIcon} alt='' />
+                <ContrastIcon className={styles.themeIcon} />
               </button>
             </li>
             <li className={styles.item}>
               <a className={styles.link} href={GITHUB_URL} target='_blank'>
-                <img className={styles.githubIcon} src={githubIcon} alt='' />
+                <GitHubIcon className={styles.githubIcon} />
               </a>
             </li>
           </ul>
