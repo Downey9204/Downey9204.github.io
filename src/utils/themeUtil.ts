@@ -1,9 +1,9 @@
 import { INIT_THEME } from '@constants/config';
 
-export const initThemeMode = () => {
+export const initThemeMode = (): 'light' | 'dark' => {
   const curTheme = sessionStorage.getItem('theme');
 
-  if (curTheme) {
+  if (curTheme === 'light' || curTheme === 'dark') {
     return curTheme;
   } else {
     sessionStorage.setItem('theme', INIT_THEME);
@@ -12,6 +12,6 @@ export const initThemeMode = () => {
   }
 };
 
-export const changeThemeMode = (mode) => {
+export const changeThemeMode = (mode: 'light' | 'dark') => {
   sessionStorage.setItem('theme', mode);
 };

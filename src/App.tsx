@@ -1,7 +1,7 @@
 import AppRoutes from '@routes/AppRoutes';
 import './App.scss';
 
-const App = () => {
+const App = (): JSX.Element => {
   return (
     <div className='app'>
       <AppRoutes />

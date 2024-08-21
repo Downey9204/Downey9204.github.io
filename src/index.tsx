@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from '@src/App';
 import store from '@store/store';
 
-const root = createRoot(document.querySelector('#root'));
+const root = createRoot(document.querySelector('#root')!);
 
 root.render(
   <BrowserRouter>

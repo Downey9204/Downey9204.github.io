@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Layout from '@layouts/Layout';
 import routes from '@routes/routes';
 
-const AppRoutes = () => {
+const AppRoutes = (): JSX.Element => {
   return (
     <Routes>
       <Route path='/' element={<Layout />}>

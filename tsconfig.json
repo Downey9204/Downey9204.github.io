@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
+    "noEmit": true,
+    "strict": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
     "baseUrl": "./",
     "paths": {
       "@apis/*": ["src/apis/*"],
@@ -16,5 +22,6 @@
       "@src/*": ["src/*"]
     }
   },
+  "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }

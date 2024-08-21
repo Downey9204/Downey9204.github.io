@@ -17,14 +17,14 @@ module.exports = (env) => {
   return {
     mode: isDevMode ? 'development' : 'production',
     devtool: isDevMode ? 'inline-source-map' : false,
-    entry: { main: './src/index.js' },
+    entry: { main: './src/index.tsx' },
     output: {
       publicPath: '/',
       path: path.join(__dirname, 'dist'),
       filename: './static/js/[name].[contenthash:8].bundle.js',
     },
     resolve: {
-      extensions: ['.js', '.jsx'],
+      extensions: ['.js', '.jsx', '.ts', '.tsx'],
       alias: {
         '@apis': path.join(__dirname, 'src', 'apis'),
         '@assets': path.join(__dirname, 'src', 'assets'),
@@ -43,23 +43,23 @@ module.exports = (env) => {
     module: {
       rules: [
         {
-          test: /\.(js|jsx)$/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: [
-                [
-                  '@babel/preset-env',
-                  { targets: 'defaults', useBuiltIns: 'usage', corejs: 3 },
+          test: /\.(js|jsx|ts|tsx)$/,
+          use: [
+            {
+              loader: 'babel-loader',
+              options: {
+                presets: [
+                  [
+                    '@babel/preset-env',
+                    { targets: 'defaults', useBuiltIns: 'usage', corejs: 3 },
+                  ],
+                  ['@babel/preset-react', { runtime: 'automatic' }],
+                  ['@babel/preset-typescript'],
                 ],
-                ['@babel/preset-react', { runtime: 'automatic' }],
-              ],
+              },
             },
-          },
-          exclude: {
-            and: [/node_modules/],
-            not: [],
-          },
+          ],
+          exclude: /node_modules/,
         },
         {
           test: /\.(css|scss)$/,
