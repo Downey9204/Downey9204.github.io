@@ -1,18 +1,18 @@
 import { Outlet } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
 
 import styles from './Layout.module.scss';
 import { setChangeTheme } from '@store/modules/themeSlice';
 import { GITHUB_URL } from '@constants/config';
-import { AppDispatch, RootState } from '@store/store';
 import logoDark from '@assets/images/logo_dark.svg';
 import logoLight from '@assets/images/logo_light.svg';
 import ContrastIcon from '@mui/icons-material/Contrast';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import useAppSelector from '@hooks/useAppSelector';
+import useAppDispatch from '@hooks/useAppDispatch';
 
 const Layout = (): JSX.Element => {
-  const { mode } = useSelector((state: RootState) => state.theme);
-  const dispatch: AppDispatch = useDispatch();
+  const { mode } = useAppSelector((state) => state.theme);
+  const dispatch = useAppDispatch();
 
   const onThemeChange = () => dispatch(setChangeTheme());
 
